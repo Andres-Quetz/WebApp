@@ -1,0 +1,116 @@
+*,
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand','Courier New', Courier, monospace;
+}
+
+.container{
+    width: 800px;
+    margin: 0 auto;
+}
+
+.container header{
+    background-image: url("../image/2.png");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    display: block;
+    padding: 20% 30%;
+    background-position: right;
+    background-color: #000;
+}
+
+header h2, header h3, .left h3{
+    background-color: rgba( 233, 233, 233, .5);
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.phrase{
+    background-color: #ccc;
+    margin: 20px 0;
+    display: block;
+    padding: 10px;
+}
+.phrase p{
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.phrase p span{
+    font-size: 16px;
+    font-style: italic;
+}
+
+.left, .right{
+float: left;
+padding: 5px;
+}
+
+.clear{
+    clear: both;
+}
+
+/* Time line*/
+
+.left{
+    width: 60%;
+
+}
+
+.timelines .item{
+    border-bottom: 1px solid #ccc;
+}
+
+.timelines .item:hover{
+    background-color: #f8f8f8;
+}
+
+.item .date,
+.item .desc{
+    float: left;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.item .date{
+    width: 35%;
+
+}
+
+.item .desc{
+    width: 65%;
+}
+
+/*Rnutshell*/
+
+.right{
+    width: 35%;
+    text-align: center;
+
+}
+
+img{
+    width: 158px;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+.right table tr:hover{
+    background-color: #f8f8f8;
+}
+
+.right table tr td:first-child{
+text-align: right;
+font-weight: bold;
+text-transform: uppercase;
+padding-right: 5px;
+font-size: 12px;
+}
+
+.right table tr td:last-child{
+text-align: left;
+border-bottom: 1px solid #ccc;
+padding-bottom: 5px;
+}
+
