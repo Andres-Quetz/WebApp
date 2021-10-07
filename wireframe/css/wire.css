@@ -1,0 +1,207 @@
+*,
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Helvetica';
+    width: 100%;
+}
+.user{
+    
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 3%;
+}
+.user image{
+    width: 100%;
+}
+.left{
+    width: 25%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+   text-align: center;
+}
+
+.left .artesanias{
+    margin-bottom: 10px;
+    padding: 1%;
+    border-radius: 8px;
+    background-color: rgb(0, 255, 208);
+}
+
+.left .artesanias h2{
+    padding: 2%;
+}
+/*.left .artesanias:hover{
+    background-color: #dcdcdc;
+}*/
+
+.left .artesanias:hover .left .artesanias:empty {background:blue; pointer-events: visible;}
+.left .artesanias:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);}
+
+.left,
+.center,
+.right{
+float: left;
+padding: 5px;
+}
+
+
+
+    
+
+.left .example h2{
+    padding: 60% 0%;
+}
+
+/*.left .example h2:hover{
+    background-color:#f8f8f81b ;
+
+}*/
+
+.left .example:hover .left .example:empty {background:blue; pointer-events: visible;}
+.left .example:hover:not(#firstrow) { transform: scale(1.1); font-weight: 700; box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);}
+
+.left .example{
+    background-image: url("../image/1.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+
+    
+    
+}
+
+.center{
+    width: 30%;
+    margin-right: 5%;
+    text-align: center;
+}
+
+.center .product{
+    margin-bottom: 10px;
+}
+
+.center .product:hover .center .product:empty {background:blue; pointer-events: visible;}
+.center .product:hover:not(#firstrow) { transform: scale(1.1); font-weight: 700; box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);}
+
+
+.center .productn{
+    padding: 1%;
+    border-radius: 8px;
+    background-color: #F9CF93;
+    margin-bottom: 10px;
+}
+
+.center  .evaluation{
+    text-align: left;
+    width: 30%;
+    float: left;
+    margin-bottom: 30px;
+}
+.center .purchase{
+    width: 40%;
+    margin-left: 60%;
+    margin-bottom: 30px;
+}
+
+/*.center .purchase:hover{
+    background-color: #dcdcdc;
+}*/
+
+.center .purchase:hover .center .purchase:empty {background:blue; pointer-events: visible;}
+.center .purchase:hover:not(#firstrow) { transform: scale(1.1); font-weight: 700; box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);}
+
+
+.center .purchase img{
+    width: 15%;
+}
+
+.center .comments{
+    
+    width: 100%;
+    background-color: lightblue;
+}
+.center .comments h3{
+    text-align: left;
+}
+.evaluation form {
+    width: 250px;
+    margin: 0 auto;
+    height: 50px;
+  }
+  
+  #form p {
+    text-align: center;
+  }
+  
+  #form label {
+    font-size: 20px;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  label {
+    color: grey;
+  }
+  
+  .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+  
+  label:hover,
+  label:hover ~ label {
+    color: orange;
+  }
+  
+  input[type="radio"]:checked ~ label {
+    color: orange;
+  }
+
+  .right{
+    width: 20%;
+    text-align: center;
+}
+
+.right .contact{
+    width: 60%;
+    background-color: #DBD0C0;
+    margin-bottom: 10px;
+    padding: 2%;
+    border-radius: 8px;
+    text-decoration:none;
+}
+
+.right .contact:hover .right .contact:empty {background:blue; pointer-events: visible;}
+.right .contact:hover:not(#firstrow) { transform: scale(1.1); font-weight: 700; box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);}
+
+.right .description{
+    width: 100%;
+    background-color: #FAEEE0;
+    margin-bottom: 10px;
+    padding: 60% 0;
+    border-radius: 5px;
+
+   
+}
+.right .description ul{
+    list-style: none;
+    
+}
+.right .price{
+    width: 50%;
+    background-color: #F9E4C8;
+    margin-bottom: 10px;
+    padding: 1%;
+}
+
+.right .location{
+    width: 100%;
+    background-color: #F9CF93;
+    margin-bottom: 10px;
+    padding: 1%;
+}
+a { color: inherit; 
+    text-decoration: none;
+} 
