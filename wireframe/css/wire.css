@@ -35,7 +35,7 @@ body{
     background-color: #dcdcdc;
 }*/
 
-.left .artesanias:hover .left .artesanias:empty {background:blue; pointer-events: visible;}
+.left .artesanias:hover .left .artesanias:empty { pointer-events: visible;}
 .left .artesanias:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);}
 
 .left,
@@ -58,7 +58,7 @@ padding: 5px;
 
 }*/
 
-.left .example:hover .left .example:empty {background:blue; pointer-events: visible;}
+.left .example:hover .left .example:empty { pointer-events: visible;}
 .left .example:hover:not(#firstrow) { transform: scale(1.1); font-weight: 700; box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);}
 
 .left .example{
@@ -80,7 +80,7 @@ padding: 5px;
     margin-bottom: 10px;
 }
 
-.center .product:hover .center .product:empty {background:blue; pointer-events: visible;}
+.center .product:hover .center .product:empty { pointer-events: visible;}
 .center .product:hover:not(#firstrow) { transform: scale(1.1); font-weight: 700; box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);}
 
 
@@ -107,7 +107,7 @@ padding: 5px;
     background-color: #dcdcdc;
 }*/
 
-.center .purchase:hover .center .purchase:empty {background:blue; pointer-events: visible;}
+.center .purchase:hover .center .purchase:empty { pointer-events: visible;}
 .center .purchase:hover:not(#firstrow) { transform: scale(1.1); font-weight: 700; box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);}
 
 
@@ -173,7 +173,7 @@ padding: 5px;
     text-decoration:none;
 }
 
-.right .contact:hover .right .contact:empty {background:blue; pointer-events: visible;}
+.right .contact:hover .right .contact:empty { pointer-events: visible;}
 .right .contact:hover:not(#firstrow) { transform: scale(1.1); font-weight: 700; box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);}
 
 .right .description{
