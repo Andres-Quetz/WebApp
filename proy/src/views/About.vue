@@ -33,13 +33,13 @@
                         elevation="24"
                      >Login </v-btn>
 
-                     <v-btn
+                     
+                </v-col>
+                <v-col cols="10" md="4">
+                    <v-btn
                         color="secondary"
                         elevation="24"
                      >Forgot? </v-btn>
-                </v-col>
-                <v-col >
-                    
                 </v-col>
                 
                 
