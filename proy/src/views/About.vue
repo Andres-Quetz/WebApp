@@ -27,15 +27,16 @@
                     </v-text-field>
                 </v-col>
 
-                <v-col cols="1" md="12">
+                <v-col cols="12" md="12">
                     <v-btn
                         color="secondary"
                         elevation="24"
+                        to="/backend"
                      >Login </v-btn>
 
                      
                 </v-col>
-                <v-col cols="10" md="4">
+                <v-col cols="12" md="12">
                     <v-btn
                         color="secondary"
                         elevation="24"
