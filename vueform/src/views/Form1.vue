@@ -94,6 +94,7 @@
     </v-form>
 </template>
 <script>
+import UserDataService from '../services/UserDataService';
 export default {
     data() {
         return {
@@ -119,7 +120,22 @@ export default {
     },
     methods: {
         submitted() {
-            this.userData.isSummitted = true;
+            // this.userData.isSummitted = true;
+            //alert(JSON.stringify(this.userData));
+            var data = {
+                email: this.userData.email,
+                pws: this.userData.pws,
+                satisfaction: this.userData.satisfaction,
+                comments: this.userData.comments,
+                options: this.userData.options,
+            };
+            UserDataService.create(data)
+                .then(() => {
+                    alert('created new user succesfully');
+                })
+                .catch((e) => {
+                    console.log(e);
+                });
         },
     },
 };

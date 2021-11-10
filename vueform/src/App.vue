@@ -7,6 +7,7 @@
 
             <router-link to="/about">Acerca de </router-link>
             <router-link to="/form1"> Form 1 </router-link>
+            <router-link to="/list"> List </router-link>
         </v-app-bar>
 
         <v-main>

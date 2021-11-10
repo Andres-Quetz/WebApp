@@ -10,6 +10,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
     "core-js": "^3.6.5",
+    "firebase": "^9.4.0",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuetify": "^2.4.0",
@@ -45,13 +46,13 @@
     },
     "rules": {}
   },
-  "prettier":{
-    "tabWidth":4,
-    "singleQuote":true
+  "prettier": {
+    "tabWidth": 4,
+    "singleQuote": true
   },
-  "postcss":{
-    "plugins":{
-      "autoprefixer":{}
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
     }
   },
   "browserslist": [
