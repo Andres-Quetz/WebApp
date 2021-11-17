@@ -112,7 +112,7 @@ export default {
                 min: (v) => v.length >= 8 || 'Min 8 characters',
             },
             label_stf: {
-                label: 'thumb-color',
+                label: 'Satisfaction',
                 val: 10,
                 color: 'red',
             },

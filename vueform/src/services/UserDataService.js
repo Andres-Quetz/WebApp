@@ -9,6 +9,12 @@ class UserDataService {
     create(user) {
         return db.add(user);
     }
+    update(id,user){
+        return db.doc(id).update(user);
+    }
+    delete(id){
+        return db.doc(id).delete();
+    }
 }
 
 export default new UserDataService();
