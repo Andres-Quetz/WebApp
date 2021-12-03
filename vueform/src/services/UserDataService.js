@@ -9,10 +9,10 @@ class UserDataService {
     create(user) {
         return db.add(user);
     }
-    update(id,user){
+    update(id, user) {
         return db.doc(id).update(user);
     }
-    delete(id){
+    delete(id) {
         return db.doc(id).delete();
     }
 }

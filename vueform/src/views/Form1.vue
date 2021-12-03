@@ -56,6 +56,26 @@
                     </v-checkbox>
                 </v-col>
                 <v-col cols="12" md="6" sm="12">
+                    <v-file-input
+                        v-model="myFile"
+                        outline
+                        accept="image/png, image/jpeg"
+                        placeholder="Click here to upload image"
+                        
+                        :disable="processing"
+                    >
+                        <template v-slot:appent-outer>
+                            <v-progress-circular
+                                v-if="processing"
+                                color="blue-grey lighten-1"
+                                indeterminate
+                                small
+                            >
+                            </v-progress-circular>
+                        </template>
+                    </v-file-input>
+                </v-col>
+                <v-col cols="12" md="6" sm="12">
                     <v-btn
                         color="success"
                         class="mr-4"
@@ -94,11 +114,16 @@
     </v-form>
 </template>
 <script>
+import { FirebaseStorage } from '../firebase';
 import UserDataService from '../services/UserDataService';
 export default {
     data() {
         return {
             show: false,
+            myFile: null,
+            URLing: null,
+            processing: false,
+            fileURL: null,
             userData: {
                 email: '',
                 pws: '',
@@ -106,6 +131,7 @@ export default {
                 comments: 'Describe your review...',
                 options: [],
                 isSummited: false,
+                image:""
             },
             rules: {
                 required: (value) => !!value || 'Required.',
@@ -122,12 +148,14 @@ export default {
         submitted() {
             // this.userData.isSummitted = true;
             //alert(JSON.stringify(this.userData));
+            this.fileInput(this.myFile);
             var data = {
                 email: this.userData.email,
                 pws: this.userData.pws,
                 satisfaction: this.userData.satisfaction,
                 comments: this.userData.comments,
                 options: this.userData.options,
+                image: this.userData.image,
             };
             UserDataService.create(data)
                 .then(() => {
@@ -136,6 +164,53 @@ export default {
                 .catch((e) => {
                     console.log(e);
                 });
+        },
+         fileInput(file) {
+            try {
+                if (file.myFile && this.myFile.name) {
+                    this.processing = true;
+                    const fr = new FileReader();
+                    fr.readAsDataURL(this.myFile);
+                    fr.addEventListener('load', () => {
+                        this.fileURL = fr.result;
+                    });
+                    const imgData = new FormData();
+                    imgData.append('image', this.myFile.type);
+                    const filepath = `img_user/${Date.now()}-${file.name}`;
+                    const metadata = { contentType: this.myFile.type };
+                    this.userData.image=filepath;
+                    //crear una referencia en Storage
+                    const ref = FirebaseStorage.ref().child(filepath);
+                    //subir el archivo a la referencia indicada en Firepath
+                    const upload = ref.put(this.myFile, metadata);
+                    // supervisar el proceso de carga al storage de FB
+                    upload.on(
+                        'state_change',
+                        function progress(snapshot) {
+                            console.warn(
+                                (snapshot.bytesTransferred /
+                                    snapshot.totalBytes) *
+                                    100
+                            );
+                        },
+                        function error(error) {
+                            console.error(error);
+                        },
+                        function complete() {
+                            /*FirebaseStorage.ref(filepath)
+                                .getDownloadURL()
+                                .then((url) => {
+                                    console.log(url);
+                                });*/
+                               // this.userData.image=filepath;
+                        }
+                    );
+                }
+            } catch (error) {
+                console.error(error);
+            } finally {
+                this.processing = false;
+            }
         },
     },
 };
