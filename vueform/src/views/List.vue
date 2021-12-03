@@ -71,6 +71,13 @@
                                     >
                                     </v-checkbox>
                                 </v-col>
+                                <v-col cols="12" md="4" sm="6">
+                                    <img
+                                        v-if="edituserData.image != null"
+                                        :src="linkfile"
+                                        height="10%"
+                                    />
+                                </v-col>
                             </v-row>
                         </v-container>
                     </v-card-text>
@@ -109,6 +116,7 @@
     </v-data-table>
 </template>
 <script>
+import { FirebaseStorage } from '../firebase';
 import UserDataService from '../services/UserDataService';
 
 export default {
@@ -131,12 +139,14 @@ export default {
             },
 
             userData: [],
+            linkfile: '',
             edituserData: {
                 email: '',
                 pws: '',
                 satisfaction: 10,
                 comments: '',
                 options: [],
+                image: '',
             },
             defaultuserData: {
                 email: '',
@@ -144,6 +154,7 @@ export default {
                 satisfaction: 10,
                 comments: 'Describe your review...',
                 options: [],
+                image: '',
             },
             currentuserData: null,
             currentIndex: -1,
@@ -165,6 +176,7 @@ export default {
                     satisfaction: data.satisfaction,
                     comments: data.comments,
                     options: data.options,
+                    image: data.image,
                 });
             });
             this.userData = _userData;
@@ -177,6 +189,9 @@ export default {
             //alert('show esiit modal');
             //this.currentIndex=this.userData.indexOf(item);
             this.edituserData = Object.assign({}, item);
+            this.getPicture(this.edituserData.image).then((link) => {
+                this.linkfile = link;
+            });
             this.dialog = true;
             console.log(item);
         },
@@ -226,6 +241,19 @@ export default {
                 .catch((e) => {
                     console.log(e);
                 });
+        },
+        getPicture(file) {
+            return new Promise((resolve, reject) => {
+                var startRef = FirebaseStorage.ref().child(file);
+                startRef
+                    .getDownloadURL()
+                    .then(function (url) {
+                        resolve(url);
+                    })
+                    .catch(function (error) {
+                        reject(error);
+                    });
+            });
         },
     },
     mounted() {

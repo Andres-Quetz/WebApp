@@ -61,10 +61,9 @@
                         outline
                         accept="image/png, image/jpeg"
                         placeholder="Click here to upload image"
-                        
                         :disable="processing"
                     >
-                        <template v-slot:appent-outer>
+                        <template v-slot:append-outer>
                             <v-progress-circular
                                 v-if="processing"
                                 color="blue-grey lighten-1"
@@ -131,7 +130,7 @@ export default {
                 comments: 'Describe your review...',
                 options: [],
                 isSummited: false,
-                image:""
+                image: '',
             },
             rules: {
                 required: (value) => !!value || 'Required.',
@@ -165,9 +164,9 @@ export default {
                     console.log(e);
                 });
         },
-         fileInput(file) {
+        fileInput(file) {
             try {
-                if (file.myFile && this.myFile.name) {
+                if (this.myFile && this.myFile.name) {
                     this.processing = true;
                     const fr = new FileReader();
                     fr.readAsDataURL(this.myFile);
@@ -178,7 +177,8 @@ export default {
                     imgData.append('image', this.myFile.type);
                     const filepath = `img_user/${Date.now()}-${file.name}`;
                     const metadata = { contentType: this.myFile.type };
-                    this.userData.image=filepath;
+                    this.userData.image = filepath;
+                
                     //crear una referencia en Storage
                     const ref = FirebaseStorage.ref().child(filepath);
                     //subir el archivo a la referencia indicada en Firepath
@@ -202,7 +202,7 @@ export default {
                                 .then((url) => {
                                     console.log(url);
                                 });*/
-                               // this.userData.image=filepath;
+                            // this.userData.image=filepath;
                         }
                     );
                 }
