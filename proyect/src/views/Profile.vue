@@ -1,5 +1,9 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+    <v-toolbar
+    color="white"
+  dark
+>
+<v-btn to="/sale" style="color:black" color="transparent">Sale</v-btn>
+
+</v-toolbar>
 </template>
