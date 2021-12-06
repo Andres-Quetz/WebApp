@@ -1,4 +1,4 @@
-<template>
+<template fluid>
 <div class="col">
   <v-container>
     <v-card-title>
@@ -7,7 +7,7 @@
     </v-card-title>
     <v-row> 
       
-      <v-col cols="10" md="2" sm="2">
+      <v-col cols="10" md="2" sm="4" xs="5">
         <div class="sub">
         <router-link style="text-decoration: none" to="/travel">
         
@@ -30,7 +30,7 @@
          </div>
       </v-col>
       
-      <v-col cols="10" md="2" sm="2" style="border-radius:10px">
+      <v-col cols="10" md="2" sm="4" xs="5">
         <div class="sub">
         <router-link style="text-decoration: none" to="/travel">
           <v-card
@@ -52,7 +52,7 @@
         </div>
       </v-col>
       
-      <v-col cols="10" md="2" sm="2">
+      <v-col cols="10" md="2" sm="4" xs="5">
         <div class="sub">
         <router-link style="text-decoration: none" to="/travel">
           <v-card
@@ -73,7 +73,7 @@
         </router-link>
         </div>
       </v-col>
-      <v-col cols="10" md="2" sm="2">
+      <v-col cols="10" md="2" sm="4" xs="5">
         <div class="sub">
         <router-link style="text-decoration: none" to="/travel">
           <v-card
@@ -94,7 +94,7 @@
         </router-link>
         </div>
       </v-col>
-      <v-col cols="10" md="2" sm="2">
+      <v-col cols="10" md="2" sm="4" xs="5">
         <div class="sub">
         <router-link style="text-decoration: none" to="/travel">
           <v-card
@@ -115,7 +115,7 @@
         </router-link>
         </div>
       </v-col>
-      <v-col cols="10" md="2" sm="2">
+      <v-col cols="10" md="2" sm="4" xs="5">
         <div class="sub">
         <router-link style="text-decoration: none" to="/travel">
           <v-card
@@ -140,8 +140,21 @@
     </v-row>
 
     <v-divider></v-divider>
+    <v-divider></v-divider>
+    
+  </v-container>
+
+  <v-container>
+    
+    <v-row> 
+      
+     
+    </v-row>
+
+    <v-divider></v-divider>
   </v-container>
   </div>
+  
 </template>
 
 <style>

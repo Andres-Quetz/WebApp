@@ -24,7 +24,7 @@
      
     </v-autocomplete>
       <v-spacer></v-spacer>
-      <v-btn to="#" color="transparent"><v-icon>add_shopping_cart</v-icon></v-btn>
+      <v-btn to="/shop" color="transparent"><v-icon>add_shopping_cart</v-icon></v-btn>
       
       <v-spacer></v-spacer>
       <v-btn to="/login"  color="transparent"> <v-icon>login</v-icon>
@@ -68,10 +68,10 @@ export default {
       drawer: false,
       items: [
         { title: "Home", url: "/", icon: "home" },
-        { title: "Profile", url: "/profile", icon: "account_circle" },
+        { title: "My acount", url: "/profile", icon: "account_circle" },
         { title: "Log in", url: "/login", icon: "login" },
-        { title: "Settings", url: "/join in", icon: "settings" },
-        { title: "Shopping Car", url: "/join in", icon: "add_shopping_cart" },
+        { title: "Settings", url: "/settings", icon: "settings" },
+        { title: "Shopping Car", url: "/shop", icon: "add_shopping_cart" },
       ],
     };
   },

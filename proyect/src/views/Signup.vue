@@ -69,10 +69,10 @@ export default {
   data() {
     return {
       show: false,
-            myFile: null,
-            URLing: null,
-            processing: false,
-            fileURL: null,
+      myFile: null,
+      URLing: null,
+      processing: false,
+      fileURL: null,
       email: "",
       password: "",
       xhrRequest: false,
