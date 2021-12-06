@@ -1,7 +1,8 @@
 <template>
   <div class="private">
-    <h1>This is a private page</h1>
+    
     <button @click="logOut">LogOut</button>
+    
   </div>
 </template>
 
@@ -18,7 +19,7 @@ export default {
         .auth()
         .signOut()
         .then(() => {
-          this.$router.replace("/");
+          this.$router.replace("/home");
         });
     },
   },

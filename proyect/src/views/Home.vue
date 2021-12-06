@@ -30,7 +30,7 @@
          </div>
       </v-col>
       
-      <v-col cols="10" md="2" sm="2">
+      <v-col cols="10" md="2" sm="2" style="border-radius:10px">
         <div class="sub">
         <router-link style="text-decoration: none" to="/travel">
           <v-card
@@ -158,6 +158,7 @@ font-size: 50px;
 .sub:hover {
   color: orange;
    transform: translate(0, -10px);
+   
 }
 .col{
   align-content: center;
